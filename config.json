@@ -1,6 +1,6 @@
 {"user": "admin", 
  "password": "*****",
- "pathDriver":"/home/pelut/Baixades/chromedriver",
- "baseUrlMoodle":"https://educaciodigital.cat/iesperealsius/moodle/",
- "pathCsv":"/home/pelut/Baixades/usuaris.csv" 
+ "pathDriver":"/$PATH$/chromedriver",
+ "baseUrlMoodle":"https://educaciodigital.cat/$NOMINSTI$/moodle/",
+ "pathCsv":"/$PATH$/usuaris.csv" 
 }
