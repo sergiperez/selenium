@@ -10,7 +10,7 @@ wget https://chromedriver.storage.googleapis.com/105.0.5195.52/chromedriver_linu
 unzip chromedriver_linux64.zip
 
 # Moodle selenium 
-Bot que pujar un fitxer csv al moodle i fa la importació d'usuaris nous.
+Bot que puja un fitxer csv al moodle i fa la importació d'usuaris nous.
 - config.json Fitxer configuració amb usuari / contrasenya i URL del Moodle.
 - usuaris.csv Fitxer csv on hi ha l'alumnat a crear usuaris nous.
 - moodleSelenium.py Fitxer Python que fa la creació.
