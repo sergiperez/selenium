@@ -56,13 +56,14 @@ for user in users:
     search_field = driver.find_element("name","P10_COGNOM2")   
     search_field.clear()
     search_field.send_keys(user["cognom2"]) 
-    driver.find_element("xpath","//a[@class='a-Button a-Button--popupLOV']").click()
-    driver.switch_to.window(driver.window_handles[1])
-    driver.find_element("xpath","//a[starts-with(text(),'"+user["ensenyament"]+"')]").click()
-    driver.switch_to.window(driver.window_handles[0])
-    sleep(2)
-    search_field = driver.find_element("name","P10_NIVELL")   
-    search_field.send_keys(user["nivell"])   
+    if (len(user["ensenyament"])>0):
+        driver.find_element("xpath","//a[@class='a-Button a-Button--popupLOV']").click()
+        driver.switch_to.window(driver.window_handles[1])
+        driver.find_element("xpath","//a[starts-with(text(),'"+user["ensenyament"]+"')]").click()
+        driver.switch_to.window(driver.window_handles[0])
+        sleep(2)
+        search_field = driver.find_element("name","P10_NIVELL")   
+        search_field.send_keys(user["nivell"])
     driver.find_element("xpath","//button[@title='Cerca']").click()
     sleep(5)
     driver.find_element("xpath","//span[@class='fa fa-pencil edit-link-pencil']").click()
@@ -86,4 +87,3 @@ csvFile.close()
 
 # Cerrar la ventana del navegador
 driver.quit()
-
