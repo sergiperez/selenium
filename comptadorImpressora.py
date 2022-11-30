@@ -5,7 +5,7 @@ from time import sleep
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.select import Select
 import json
-file = open('config.json')
+file = open('configu.json')
 params = json.load(file)
 #driver = webdriver.Chrome("/home/super/")
 
