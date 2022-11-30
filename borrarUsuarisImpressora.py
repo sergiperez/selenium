@@ -6,7 +6,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.select import Select
 import json
 import csv
-
+file = open('config.json')
+params = json.load(file)
 #driver = webdriver.Chrome("/home/super/")
 
 from webdriver_manager.chrome import ChromeDriverManager
@@ -17,14 +18,14 @@ driver.maximize_window()
 
 # Acceder a la aplicación web
 #URL IMPRESSORA
-driver.get("http://10.241.181.214:9191/admin")
+driver.get(params["baseUrlMoodle"])
 main_page = driver.current_window_handle
 
 # Localizar cuadro de texto
 search_field = driver.find_element("id","inputUsername")
-search_field.send_keys("direccio")
+search_field.send_keys(params["user"])
 search_field = driver.find_element("id","inputPassword")
-search_field.send_keys("7553305")
+search_field.send_keys(params["password"])
 search_field = driver.find_element("name","$Submit$0")
 search_field.submit()
 
@@ -48,6 +49,3 @@ for user in users:
 # Cerrar la ventana del navegador
 driver.quit()
 csvFile.close()
-
-
-
