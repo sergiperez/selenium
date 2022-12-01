@@ -46,6 +46,6 @@ for user in users:
     search_field = driver.find_element("xpath","//a[@href='/app?service=page/UserList']").click()
     sleep(1)
     sleep(1)
-# Cerrar la ventana del navegador
+# Cerrar la ventana del  navegador
 driver.quit()
 csvFile.close()
