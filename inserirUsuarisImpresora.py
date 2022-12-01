@@ -30,7 +30,7 @@ search_field.send_keys(params["password"])
 search_field = driver.find_element("name","$Submit$0")
 search_field.submit()
 
-#Crear usuari
+#Crear  usuari
 sleep(1)
 search_field = driver.find_element("id","pageactions").click()
 search_field = driver.find_element("xpath","//a[@href='/app?service=page/CreateInternalUser']").click()
