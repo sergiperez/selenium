@@ -1,6 +1,6 @@
 {"user": "direccio", 
 "password": "7553305",
-"baseUrlMoodle":"http://10.241.181.214:9191/admin",
+"baseUrl":"http://10.241.181.214:9191/admin",
 "copies_restants":"60",
 "copies_a_afegir":"1000"
 }
