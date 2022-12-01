@@ -48,7 +48,7 @@ for s in search_field:
 for h in enllacos:
     driver.get(h)
     sleep(1)
-    #actualitzes sumbmit
+    #actualitzes  sumbmit
     search_field = driver.find_element("xpath","//a[@href='/app?service=direct/1/UserDetails/$DirectLink&sp=1']").click()
     search_field = driver.find_element("id","adjustmentValue")
     search_field.clear()
