@@ -17,7 +17,7 @@ driver.maximize_window()
 
 # Acceder a la aplicación web
 #URL IMPRESSORA
-driver.get(params["baseUrlMoodle"])
+driver.get(params["baseUrl"])
 main_page = driver.current_window_handle
 
 # Localizar cuadro de texto
