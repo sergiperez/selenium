@@ -41,7 +41,7 @@ users = csv.DictReader(csvFile)
 for user in users:
     search_field = driver.find_element("id","chosen-username")
     search_field.clear()
-    search_field.send_keys(user["nom"])
+    search_field.send_keys(user["usuari"])
     search_field = driver.find_element("name","adminInputFullName")
     search_field.clear()
     search_field.send_keys(user["nom"]+user["cognoms"])
